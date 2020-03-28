@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <title>Feeder Portal</title>
+        <base href="/">
+
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Withinpixels">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="icon" type="image/x-icon" href="assets/icons/feeder/favicon.png">
+        <link href="assets/icons/meteocons/style.css" rel="stylesheet">
+        <link href="assets/icons/material-icons/outline/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+
+        <!-- FUSE Splash Screen CSS -->
+        <style type="text/css">
+            #fuse-splash-screen {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #000f3c;
+                z-index: 99999;
+                pointer-events: none;
+            }
+
+            #fuse-splash-screen .center {
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            #fuse-splash-screen .logo {
+                width: 90px;
+                margin: 0 auto;
+            }
+
+            #fuse-splash-screen .logo img {
+                filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.2))
+            }
+
+            #fuse-splash-screen .spinner-wrapper {
+                display: block;
+                position: relative;
+                width: 100%;
+                min-height: 100px;
+                height: 100px;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner {
+                position: absolute;
+                overflow: hidden;
+                left: 50%;
+                margin-left: -50px;
+                animation: outer-rotate 2.91667s linear infinite;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .gap {
+                position: absolute;
+                left: 49px;
+                right: 49px;
+                top: 0;
+                bottom: 0;
+                border-top: 10px solid;
+                box-sizing: border-box;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .left,
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .right {
+                position: absolute;
+                top: 0;
+                height: 100px;
+                width: 50px;
+                overflow: hidden;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .left .half-circle,
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .right .half-circle {
+                position: absolute;
+                top: 0;
+                width: 100px;
+                height: 100px;
+                box-sizing: border-box;
+                border: 10px solid #4285F4;
+                border-bottom-color: transparent;
+                border-radius: 50%;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .left {
+                left: 0;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .left .half-circle {
+                left: 0;
+                border-right-color: transparent;
+                animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+                -webkit-animation: left-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .right {
+                right: 0;
+            }
+
+            #fuse-splash-screen .spinner-wrapper .spinner .inner .right .half-circle {
+                right: 0;
+                border-left-color: transparent;
+                animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+                -webkit-animation: right-wobble 1.3125s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+            }
+
+            @keyframes outer-rotate {
+                0% {
+                    transform: rotate(0deg) scale(0.5);
+                }
+                100% {
+                    transform: rotate(360deg) scale(0.5);
+                }
+            }
+
+            @keyframes left-wobble {
+                0%, 100% {
+                    transform: rotate(130deg);
+                }
+                50% {
+                    transform: rotate(-5deg);
+                }
+            }
+
+            @keyframes right-wobble {
+                0%, 100% {
+                    transform: rotate(-130deg);
+                }
+                50% {
+                    transform: rotate(5deg);
+                }
+            }
+
+            @keyframes sporadic-rotate {
+                12.5% {
+                    transform: rotate(135deg);
+                }
+                25% {
+                    transform: rotate(270deg);
+                }
+                37.5% {
+                    transform: rotate(405deg);
+                }
+                50% {
+                    transform: rotate(540deg);
+                }
+                62.5% {
+                    transform: rotate(675deg);
+                }
+                75% {
+                    transform: rotate(810deg);
+                }
+                87.5% {
+                    transform: rotate(945deg);
+                }
+                100% {
+                    transform: rotate(1080deg);
+                }
+            }
+            .ship-wheel {
+                fill: #f80b3d;
+                -webkit-animation: rotation 2s infinite;
+            }
+
+            .red-color {
+
+                fill: #ffffff;
+            }
+            @-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+        </style>
+        <!-- / FUSE Splash Screen CSS -->
+    <link rel="stylesheet" href="styles.a7e5cabe0dff06f447f7.css"></head>
+
+    <body>
+
+        <!-- FUSE Splash Screen -->
+        <fuse-splash-screen id="fuse-splash-screen">
+
+            <div class="center">
+
+                <div class="logo">
+                   
+<svg height="100%" viewBox="0 0 512 512" width="100%" xmlns="http://www.w3.org/2000/svg"  class="ship-wheel"><path class="red-color" d="m256 111c-79.953125 0-145 65.046875-145 145s65.046875 145 145 145 145-65.046875 145-145-65.046875-145-145-145zm91.191406 214.976562-43.183594-43.183593c2.066407-3.691407 3.71875-7.640625 4.894532-11.792969h61.121094c-2.683594 20.507812-10.792969 39.328125-22.832032 54.976562zm-205.214844-54.976562h61.121094c1.175782 4.152344 2.828125 8.101562 4.894532 11.792969l-43.183594 43.183593c-12.039063-15.648437-20.148438-34.46875-22.832032-54.976562zm22.832032-84.976562 43.183594 43.183593c-2.066407 3.691407-3.71875 7.640625-4.894532 11.792969h-61.121094c2.683594-20.507812 10.792969-39.328125 22.832032-54.976562zm66.191406 69.976562c0-13.785156 11.214844-25 25-25s25 11.214844 25 25-11.214844 25-25 25-25-11.214844-25-25zm51.792969-48.007812c-3.691407-2.066407-7.640625-3.71875-11.792969-4.894532v-61.121094c20.507812 2.683594 39.328125 10.792969 54.976562 22.832032zm-41.792969-4.894532c-4.152344 1.175782-8.101562 2.828125-11.792969 4.894532l-43.183593-43.183594c15.648437-12.039063 34.46875-20.148438 54.976562-22.832032zm-11.792969 100.910156c3.691407 2.066407 7.640625 3.71875 11.792969 4.894532v61.121094c-20.507812-2.683594-39.328125-10.792969-54.976562-22.832032zm41.792969 4.894532c4.152344-1.175782 8.101562-2.828125 11.792969-4.894532l43.183593 43.183594c-15.648437 12.039063-34.46875 20.148438-54.976562 22.832032zm37.902344-67.902344c-1.175782-4.152344-2.828125-8.101562-4.894532-11.792969l43.183594-43.183593c12.039063 15.648437 20.148438 34.46875 22.832032 54.976562zm0 0"/><path d="m497 241h-36.550781c-3.289063-45.261719-21.335938-86.496094-49.339844-118.894531l25.203125-25.207031c5.859375-5.855469 5.859375-15.351563 0-21.210938s-15.355469-5.859375-21.214844 0l-25.203125 25.203125c-32.398437-28.003906-73.632812-46.050781-118.894531-49.339844v-36.550781c0-8.285156-6.714844-15-15-15s-15 6.714844-15 15v36.550781c-45.261719 3.289063-86.496094 21.332031-118.894531 49.339844l-25.203125-25.203125c-5.859375-5.855469-15.355469-5.855469-21.214844 0-5.859375 5.859375-5.859375 15.355469 0 21.214844l25.203125 25.203125c-28.003906 32.398437-46.050781 73.632812-49.339844 118.894531h-36.550781c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h36.550781c3.289063 45.261719 21.332031 86.496094 49.339844 118.894531l-25.203125 25.207031c-5.859375 5.855469-5.859375 15.351563 0 21.210938 2.929688 2.929688 6.769531 4.394531 10.605469 4.394531 3.839843 0 7.679687-1.464843 10.605469-4.394531l25.207031-25.203125c32.398437 28.007813 73.632812 46.050781 118.894531 49.339844v36.550781c0 8.285156 6.714844 15 15 15 8.28125 0 15-6.714844 15-15v-36.550781c45.261719-3.289063 86.496094-21.332031 118.894531-49.339844l25.203125 25.203125c2.929688 2.929688 6.769532 4.394531 10.605469 4.394531 3.839844 0 7.679687-1.464843 10.605469-4.394531 5.859375-5.855469 5.859375-15.355469 0-21.210938l-25.203125-25.207031c28.007812-32.398437 46.050781-73.632812 49.339843-118.894531h36.554688c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15zm-241 190c-96.496094 0-175-78.503906-175-175s78.503906-175 175-175 175 78.503906 175 175-78.503906 175-175 175zm0 0"/></svg>
+                </div>
+
+                <!-- Material Design Spinner
+                <div class="spinner-wrapper">
+                    <div class="spinner">
+                        <div class="inner">
+                            <div class="gap"></div>
+                            <div class="left">
+                                <div class="half-circle"></div>
+                            </div>
+                            <div class="right">
+                                <div class="half-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                / Material Design Spinner -->
+
+            </div>
+
+        </fuse-splash-screen>
+        <!-- / FUSE Splash Screen -->
+
+        <app></app>
+
+    <script src="runtime-es2015.edb2fcf2778e7bf1d426.js" type="module"></script><script src="runtime-es5.edb2fcf2778e7bf1d426.js" nomodule defer></script><script src="polyfills-es5.3d46976420fe286b7d89.js" nomodule defer></script><script src="polyfills-es2015.77fd33a57e50df0ab61b.js" type="module"></script><script src="main-es2015.6cb12a669cd768bdbdec.js" type="module"></script><script src="main-es5.6cb12a669cd768bdbdec.js" nomodule defer></script></body>
+
+</html>
